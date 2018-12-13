@@ -9,17 +9,17 @@ import arcpy # import arcpy module
 import os
 import sys
 
-arcpy.env.workspace = r"C:\Users\kcheriyan\Desktop\Projects\GMAS\Mapping Initiative\Mapping\Data\CountryBndy.gdb" # Set workspace environment as gdb with country boundaries
+arcpy.env.workspace = r"C:\...\CountryBndy.gdb" # Set workspace environment as gdb with country boundaries
 arcpy.env.overwriteOutput = True  # Overwrite output
 
 # Location for individual country boundaries, Source: Natural Earth, 50m resolution
-cntyBndy = r"C:\Users\kcheriyan\Desktop\Projects\GMAS\Mapping Initiative\Mapping\Data\CountryBndy.gdb" 
+cntyBndy = r"C:\...\CountryBndy.gdb" 
 # Location for Global Mining Facilities Geodatabase, all countries in one Master-gdb
-minFac_global = r"C:\Users\kcheriyan\Desktop\Projects\GMAS\Mapping Initiative\Mapping\Data\GlobalMinFacGeoDBv2\GlobalMiningFacilities.gdb\GlobalMinFacDB"
+minFac_global = r"C:\...\GlobalMiningFacilities.gdb\GlobalMinFacDB"
 
 
 #Output file for individual GlobalMinFac records for each country
-outFC = "C:\Users\kcheriyan\Desktop\Projects\GMAS\Mapping Initiative\Mapping\Data\GlobalMinFacGeoDBv2\GlobalMinFac_country.gdb\\"
+outFC = "C:\Users\...\GlobalMinFac_country.gdb\\"
 # All countries in Country boundary gdb
 CntyFC = arcpy.ListFeatureClasses() 
 
