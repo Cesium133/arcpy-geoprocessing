@@ -1,0 +1,16 @@
+'''
+Get count of total number of gemstones in different feature classes in geodatabase
+'''
+
+import arcpy
+arcpy.env.workspace = r"C:\Users\...\gemstones.gdb"
+fcs = arcpy.ListFeatureClasses()
+
+gemCounter = 0
+
+for fc in fcs:
+    cnt = int(arcpy.GetCount_management(fc).getOutput(0))
+    print str(cnt) + " " + fc
+    gemCounter = gemCounter + cnt
+
+print str(gemCounter) + " total number of gemstones in Afghanistan"
