@@ -8,9 +8,9 @@ import arcpy
 arcpy.env.overwriteOutput = True
 
 # input shapefile containing all gemstone feature classes (resulting layer after performing spatial join with Province boundary layer)
-in_fc = r"C:\Users\kcheriyan\Desktop\Projects\GMAS\Afghanistan Project\Afghanistan Geology maps\Gemstone-Geology maps\all_gemstones\join\gemstone_provinces.shp"
+in_fc = r"..."
 # output shapefile for Sort_management to output
-fc = r"C:\Users\kcheriyan\Desktop\Projects\GMAS\Afghanistan Project\Afghanistan Geology maps\Gemstone-Geology maps\all_gemstones\join\gemstone_provinces_sorted.shp"
+fc = r"..."
 # Sort gemstone name in alphabetical order so that final list will be grouped by gemstone
 arcpy.Sort_management(in_fc,fc,[["Commodity1",'ASCENDING']])
 
